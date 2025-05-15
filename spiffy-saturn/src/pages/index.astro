@@ -14,6 +14,14 @@ import Button from '../components/Button.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Trilogy Sunstone Homes | Find Your Dream Home</title>
+		<!-- RealScout Widget Script and Style -->
+		<script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
+		<style>
+		  realscout-office-listings {
+		    --rs-listing-divider-color: rgb(101, 141, 172);
+		    width: 100%;
+		  }
+		</style>
 	</head>
 
 	<body class="bg-[#F7F9FC] text-[#0A2540]">
@@ -58,7 +66,7 @@ import Button from '../components/Button.astro';
 					<h2 class="text-2xl md:text-3xl font-semibold mb-4 text-center">Explore Home Values & Listings</h2>
 					<div class="w-full h-[400px] flex items-center justify-center border-2 border-dashed border-[#3A8DDE] rounded-lg bg-white shadow" id="widget-container">
 						<!-- RealScout, Homebot, CloudCMA, Percy.ai widgets will be loaded here -->
-						<span class="text-[#3A8DDE]">[Interactive Widget Coming Soon]</span>
+						<realscout-office-listings agent-encoded-id="QWdlbnQtMjI1MDUw" sort-order="NEWEST" listing-status="For Sale" property-types="SFR,MF" price-min="500000" price-max="700000"></realscout-office-listings>
 					</div>
 				</div>
 			</section>
