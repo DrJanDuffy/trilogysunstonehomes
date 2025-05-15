@@ -1,0 +1,9 @@
+name = "trilogysunstonehomes"
+type = "javascript"
+account_id = ""
+workers_dev = false
+route = ""
+zone_id = ""
+[site]
+bucket = "./dist"
+entry-point = "." 

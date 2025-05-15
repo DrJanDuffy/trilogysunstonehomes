@@ -13,13 +13,70 @@ import Button from '../components/Button.astro';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
+		<title>Trilogy Sunstone Homes | Find Your Dream Home</title>
 	</head>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
+	<body class="bg-[#F7F9FC] text-[#0A2540]">
+		<main class="min-h-screen flex flex-col">
+			<!-- Hero Section -->
+			<section class="relative flex flex-col items-center justify-center min-h-[60vh] bg-gradient-to-br from-[#3A8DDE] to-[#16B286] text-white shadow-lg">
+				<h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow">Find Your Dream Home at Trilogy Sunstone</h1>
+				<p class="text-lg md:text-2xl mb-8 max-w-xl text-center">Las Vegas' premier 55+ active lifestyle community. Discover new homes, amenities, and a vibrant neighborhood.</p>
+				<Button class="bg-white text-[#3A8DDE] font-semibold px-8 py-3 rounded shadow hover:bg-[#F7F9FC] transition">Get Started</Button>
+			</section>
+			<!-- Pain Point Section -->
+			<section class="py-16 px-4 bg-white shadow-md">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-2xl md:text-3xl font-semibold mb-4">Tired of searching endless listings?</h2>
+					<p class="text-lg text-[#3A8DDE]">We simplify your home search with curated listings, expert guidance, and exclusive community insights.</p>
+				</div>
+			</section>
+			<!-- Solution Section -->
+			<section class="py-16 px-4 bg-[#F7F9FC] shadow-md">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-2xl md:text-3xl font-semibold mb-4">A Better Way to Buy</h2>
+					<ul class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+						<li class="bg-white rounded-lg p-6 shadow">Personalized Home Matches</li>
+						<li class="bg-white rounded-lg p-6 shadow">Neighborhood & Amenity Insights</li>
+						<li class="bg-white rounded-lg p-6 shadow">Guided Buyer Journey</li>
+					</ul>
+				</div>
+			</section>
+			<!-- Social Proof Section -->
+			<section class="py-16 px-4 bg-white shadow-md">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-2xl md:text-3xl font-semibold mb-4">What Buyers Are Saying</h2>
+					<div class="flex flex-col md:flex-row gap-8 justify-center mt-8">
+						<blockquote class="bg-[#F7F9FC] p-6 rounded shadow max-w-sm mx-auto">“The process was so easy and the community is amazing!”<br/><span class="block mt-2 font-semibold text-[#16B286]">— Linda S.</span></blockquote>
+						<blockquote class="bg-[#F7F9FC] p-6 rounded shadow max-w-sm mx-auto">“I found my perfect home and made new friends right away.”<br/><span class="block mt-2 font-semibold text-[#3A8DDE]">— Mark T.</span></blockquote>
+					</div>
+				</div>
+			</section>
+			<!-- Interactive Tool Section (Widget Placeholder) -->
+			<section class="py-16 px-4 bg-[#F7F9FC] shadow-md min-h-[480px] flex flex-col items-center justify-center relative z-[1]">
+				<div class="max-w-2xl w-full">
+					<h2 class="text-2xl md:text-3xl font-semibold mb-4 text-center">Explore Home Values & Listings</h2>
+					<div class="w-full h-[400px] flex items-center justify-center border-2 border-dashed border-[#3A8DDE] rounded-lg bg-white shadow" id="widget-container">
+						<!-- RealScout, Homebot, CloudCMA, Percy.ai widgets will be loaded here -->
+						<span class="text-[#3A8DDE]">[Interactive Widget Coming Soon]</span>
+					</div>
+				</div>
+			</section>
+			<!-- Objection Handling Section -->
+			<section class="py-16 px-4 bg-white shadow-md">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-2xl md:text-3xl font-semibold mb-4">Have Questions or Concerns?</h2>
+					<p class="text-lg text-[#0A2540] mb-6">Our team is here to help you every step of the way. No pressure, just guidance.</p>
+					<Button class="bg-[#16B286] text-white font-semibold px-8 py-3 rounded shadow hover:bg-[#3A8DDE] transition">Ask a Question</Button>
+				</div>
+			</section>
+			<!-- Clear CTA Section -->
+			<section class="py-16 px-4 bg-[#3A8DDE] text-white shadow-lg">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-2xl md:text-3xl font-semibold mb-4">Ready to Start Your Journey?</h2>
+					<Button class="bg-white text-[#3A8DDE] font-semibold px-8 py-3 rounded shadow hover:bg-[#F7F9FC] transition">Get Your Free Guide</Button>
+				</div>
+			</section>
+		</main>
 	</body>
 </html>
