@@ -1,0 +1,6 @@
+name = "trilogysunstonehomes"
+account_id = "2cc579c1ec9e426ed585e933ebf4753b"
+workers_dev = true
+
+[site]
+bucket = "./dist" 
