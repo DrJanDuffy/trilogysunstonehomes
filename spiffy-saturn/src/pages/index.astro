@@ -10,10 +10,58 @@ import Button from '../components/Button.astro';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Trilogy Sunstone Homes | Find Your Dream Home</title>
+		<title>Trilogy Sunstone Homes | Las Vegas 55+ Community</title>
+		<meta name="description" content="Discover Trilogy Sunstone, Las Vegas' premier 55+ active lifestyle community. Browse new homes priced $500k–$700k, explore amenities, and connect with Dr. Jan Duffy, your local expert." />
+		<link rel="canonical" href="https://trilogysunstonehomes.pages.dev/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://trilogysunstonehomes.pages.dev/" />
+		<meta property="og:title" content="Trilogy Sunstone Homes | Las Vegas 55+ Community" />
+		<meta property="og:description" content="Las Vegas' premier 55+ active lifestyle community. Browse new homes, explore amenities, and connect with Dr. Jan Duffy." />
+		<meta property="og:image" content="https://trilogysunstonehomes.pages.dev/og-image.jpg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Trilogy Sunstone Homes | Las Vegas 55+ Community" />
+		<meta name="twitter:description" content="Las Vegas' premier 55+ active lifestyle community. Browse homes $500k–$700k with Dr. Jan Duffy." />
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "RealEstateAgent",
+			"name": "Dr. Jan Duffy — Trilogy Sunstone Specialist",
+			"url": "https://trilogysunstonehomes.pages.dev/",
+			"telephone": "+1-702-842-2276",
+			"email": "DrDuffy@bhhsnv.com",
+			"description": "Dr. Jan Duffy is a real estate specialist serving the Trilogy Sunstone 55+ community in Las Vegas, NV with Berkshire Hathaway HomeServices Nevada Properties.",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Las Vegas",
+				"addressRegion": "NV",
+				"addressCountry": "US"
+			},
+			"areaServed": { "@type": "Place", "name": "Trilogy Sunstone, Las Vegas, NV" },
+			"memberOf": { "@type": "Organization", "name": "Berkshire Hathaway HomeServices Nevada Properties" }
+		})} />
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			"mainEntity": [
+				{
+					"@type": "Question",
+					"name": "What is Trilogy Sunstone?",
+					"acceptedAnswer": { "@type": "Answer", "text": "Trilogy Sunstone is a premier 55+ active lifestyle community in Las Vegas, Nevada, featuring new construction homes priced from $500,000 to $700,000 with resort-style amenities." }
+				},
+				{
+					"@type": "Question",
+					"name": "Who can help me buy a home at Trilogy Sunstone?",
+					"acceptedAnswer": { "@type": "Answer", "text": "Dr. Jan Duffy of Berkshire Hathaway HomeServices Nevada Properties specializes in Trilogy Sunstone and can guide you through buying a home in this community." }
+				},
+				{
+					"@type": "Question",
+					"name": "What is the price range for Trilogy Sunstone homes?",
+					"acceptedAnswer": { "@type": "Answer", "text": "Homes in Trilogy Sunstone are generally priced between $500,000 and $700,000, offering new construction with premium 55+ amenities." }
+				}
+			]
+		})} />
 		<!-- RealScout Widget Script and Style -->
 		<script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
 		<style>
