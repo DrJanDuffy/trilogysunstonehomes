@@ -1,31 +1,29 @@
 ---
 import '../styles/global.css';
-// Component Imports
+import MainLayout from '../layouts/main.astro';
 import Button from '../components/Button.astro';
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<MainLayout
+	content={{
+		title: 'Trilogy Sunstone Homes | Find Your Dream Home',
+		description:
+			"Las Vegas' premier 55+ active lifestyle community. Discover new homes, amenities, and a vibrant neighborhood at Trilogy Sunstone.",
+		canonicalURL: 'https://www.trilogysunstonehomes.com/',
+	}}
+>
+	<Fragment slot="head">
 		<meta name="generator" content={Astro.generator} />
-		<title>Trilogy Sunstone Homes | Find Your Dream Home</title>
 		<!-- RealScout Widget Script and Style -->
 		<script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
 		<style>
-		  realscout-office-listings {
-		    --rs-listing-divider-color: rgb(101, 141, 172);
-		    width: 100%;
-		  }
+			realscout-office-listings {
+				--rs-listing-divider-color: rgb(101, 141, 172);
+				width: 100%;
+			}
 		</style>
-	</head>
-
-	<body class="bg-[#F7F9FC] text-[#0A2540]">
-		<main class="min-h-screen flex flex-col">
+	</Fragment>
+	<main class="min-h-screen flex flex-col bg-[#F7F9FC] text-[#0A2540]">
 			<!-- Hero Section -->
 			<section class="relative flex flex-col items-center justify-center min-h-[60vh] bg-gradient-to-br from-[#3A8DDE] to-[#16B286] text-white shadow-lg">
 				<h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow">Find Your Dream Home at Trilogy Sunstone</h1>
@@ -85,6 +83,5 @@ import Button from '../components/Button.astro';
 					<Button class="bg-white text-[#3A8DDE] font-semibold px-8 py-3 rounded shadow hover:bg-[#F7F9FC] transition">Get Your Free Guide</Button>
 				</div>
 			</section>
-		</main>
-	</body>
-</html>
+	</main>
+</MainLayout>
