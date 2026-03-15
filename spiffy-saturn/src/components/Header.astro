@@ -1,0 +1,31 @@
+---
+const navLinks = [
+	{ href: '/', label: 'Home' },
+	{ href: '/about', label: 'About' },
+	{ href: '/neighborhoods/trilogy-sunstone', label: 'Trilogy Sunstone' },
+	{ href: '/neighborhoods', label: 'Neighborhoods' },
+	{ href: '/buyers-guide', label: "Buyer's Guide" },
+	{ href: '/faq', label: 'FAQ' },
+	{ href: '/contact', label: 'Contact' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-[#0A2540]/10 bg-white/95 backdrop-blur shadow-sm">
+	<nav class="max-w-5xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4" aria-label="Main navigation">
+		<a href="/" class="text-xl font-bold text-[#0A2540] hover:text-[#3A8DDE] transition-colors">
+			Trilogy Sunstone Homes
+		</a>
+		<ul class="flex flex-wrap items-center gap-6">
+			{navLinks.map((link) => (
+				<li>
+					<a
+						href={link.href}
+						class="text-[#0A2540] font-medium hover:text-[#3A8DDE] focus:outline-none focus:ring-2 focus:ring-[#3A8DDE] focus:ring-offset-2 rounded px-2 py-1 transition-colors"
+					>
+						{link.label}
+					</a>
+				</li>
+			))}
+		</ul>
+	</nav>
+</header>

@@ -1,0 +1,75 @@
+---
+import MainLayout from '../../layouts/main.astro';
+---
+
+<MainLayout
+	content={{
+		title: 'Neighborhoods & Communities | Trilogy Sunstone Homes',
+		description:
+			'Explore Trilogy Sunstone and nearby Las Vegas 55+ and active adult communities. Find the right neighborhood for your next home.',
+		canonicalURL: 'https://www.trilogysunstonehomes.com/neighborhoods/',
+	}}
+>
+	<main class="min-h-screen flex flex-col">
+		<section class="relative flex flex-col items-center justify-center py-20 px-4 bg-gradient-to-br from-[#3A8DDE] to-[#16B286] text-white shadow-lg">
+			<h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow">Neighborhoods We Serve</h1>
+			<p class="text-lg md:text-xl max-w-2xl text-center opacity-95">
+				Trilogy Sunstone and surrounding Las Vegas area communities.
+			</p>
+		</section>
+
+		<section class="py-16 px-4 bg-white shadow-md">
+			<div class="max-w-4xl mx-auto">
+				<h2 class="text-2xl font-semibold text-[#0A2540] mb-8">Featured Community</h2>
+				<div class="rounded-lg border-2 border-[#3A8DDE]/20 bg-[#F7F9FC] p-6 md:p-8">
+					<h3 class="text-xl font-bold text-[#3A8DDE] mb-2">Trilogy Sunstone</h3>
+					<p class="text-[#0A2540] mb-4">
+						Las Vegas' premier 55+ active lifestyle community. New homes, resort-style amenities, and a vibrant neighborhood designed for active adults.
+					</p>
+					<a
+						href="/"
+						class="inline-block px-6 py-3 rounded-lg font-semibold bg-[#3A8DDE] text-white hover:bg-[#2d7bc7] transition shadow"
+					>
+						View Trilogy Sunstone Listings
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 px-4 bg-[#F7F9FC] shadow-md">
+			<div class="max-w-4xl mx-auto">
+				<h2 class="text-2xl font-semibold text-[#0A2540] mb-6">Nearby Las Vegas Areas</h2>
+				<p class="text-[#0A2540] mb-8">
+					We also serve buyers and sellers in surrounding Southern Nevada communities. Ask us about Summerlin, Henderson, Green Valley, and more.
+				</p>
+				<ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+					<li class="bg-white rounded-lg p-4 shadow">
+						<span class="font-medium text-[#0A2540]">Summerlin</span>
+						<p class="text-sm text-[#0A2540]/80 mt-1">Master-planned community west of Las Vegas.</p>
+					</li>
+					<li class="bg-white rounded-lg p-4 shadow">
+						<span class="font-medium text-[#0A2540]">Henderson</span>
+						<p class="text-sm text-[#0A2540]/80 mt-1">Family and active adult communities southeast of Las Vegas.</p>
+					</li>
+					<li class="bg-white rounded-lg p-4 shadow">
+						<span class="font-medium text-[#0A2540]">Green Valley</span>
+						<p class="text-sm text-[#0A2540]/80 mt-1">Henderson area with strong 55+ options.</p>
+					</li>
+					<li class="bg-white rounded-lg p-4 shadow">
+						<span class="font-medium text-[#0A2540]">North Las Vegas</span>
+						<p class="text-sm text-[#0A2540]/80 mt-1">Growing area with new construction and value.</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="py-16 px-4 bg-white shadow-md">
+			<div class="max-w-4xl mx-auto text-center">
+				<h2 class="text-2xl font-semibold text-[#0A2540] mb-4">Not Sure Where to Start?</h2>
+				<a href="/contact" class="inline-block px-6 py-3 rounded-lg font-semibold bg-[#16B286] text-white hover:bg-[#3A8DDE] transition shadow">
+					Contact Us
+				</a>
+			</div>
+		</section>
+	</main>
+</MainLayout>

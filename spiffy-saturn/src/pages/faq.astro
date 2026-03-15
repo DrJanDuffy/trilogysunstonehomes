@@ -1,0 +1,62 @@
+---
+import MainLayout from '../layouts/main.astro';
+
+const faqItems = [
+	{ question: 'What is Trilogy Sunstone?', answer: 'Trilogy Sunstone is a 55+ active adult community in the Las Vegas area. It offers new homes and amenities designed for an active, engaged lifestyle.' },
+	{ question: 'Who can buy a home in Trilogy Sunstone?', answer: 'Trilogy Sunstone is an age-qualified 55+ community. At least one resident must be 55 or older. Specific rules may apply—we can clarify for your situation.' },
+	{ question: 'What areas do you serve?', answer: 'We focus on Trilogy Sunstone and the greater Las Vegas and Henderson area, including Summerlin, Green Valley, and other Southern Nevada communities.' },
+	{ question: 'How do I see current listings?', answer: 'Our homepage features curated Trilogy Sunstone listings. You can also contact us for a personalized search and to schedule showings.' },
+	{ question: 'How can I get in touch?', answer: "Call us or use the contact page. We're happy to answer questions about Trilogy Sunstone, current inventory, and the buying process." },
+];
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: faqItems.map((item) => ({
+		'@type': 'Question',
+		name: item.question,
+		acceptedAnswer: { '@type': 'Answer', text: item.answer },
+	})),
+};
+---
+
+<MainLayout
+	content={{
+		title: 'FAQ | Trilogy Sunstone Homes',
+		description:
+			'Frequently asked questions about Trilogy Sunstone, Las Vegas 55+ community, home buying, and real estate in the area.',
+		canonicalURL: 'https://www.trilogysunstonehomes.com/faq/',
+	}}
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+	</Fragment>
+	<main class="min-h-screen flex flex-col">
+		<section class="relative flex flex-col items-center justify-center py-20 px-4 bg-gradient-to-br from-[#3A8DDE] to-[#16B286] text-white shadow-lg">
+			<h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow">Frequently Asked Questions</h1>
+			<p class="text-lg md:text-xl max-w-2xl text-center opacity-95">
+				Common questions about Trilogy Sunstone and buying in the area.
+			</p>
+		</section>
+
+		<section class="py-16 px-4 bg-white shadow-md">
+			<div class="max-w-3xl mx-auto space-y-8">
+				{faqItems.map((item) => (
+					<article class="border-b border-[#0A2540]/10 pb-6 last:border-0">
+						<h2 class="text-xl font-semibold text-[#0A2540] mb-2">{item.question}</h2>
+						<p class="text-[#0A2540]">{item.answer}</p>
+					</article>
+				))}
+			</div>
+		</section>
+
+		<section class="py-16 px-4 bg-[#F7F9FC] shadow-md">
+			<div class="max-w-4xl mx-auto text-center">
+				<h2 class="text-2xl font-semibold text-[#0A2540] mb-4">Still have questions?</h2>
+				<a href="/contact" class="inline-block px-6 py-3 rounded-lg font-semibold bg-[#16B286] text-white hover:bg-[#3A8DDE] transition shadow">
+					Contact Us
+				</a>
+			</div>
+		</section>
+	</main>
+</MainLayout>
