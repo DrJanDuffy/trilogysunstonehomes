@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd spiffy-saturn && npm install && npm run build",
+  "outputDirectory": "spiffy-saturn/dist",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "trilogysunstonehomes.com" }],
+      "destination": "https://www.trilogysunstonehomes.com/:path*",
+      "permanent": true
+    }
+  ]
+}
