@@ -1,1 +1,52 @@
 @import 'tailwindcss';
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply antialiased text-slate-800;
+  }
+  a,
+  button {
+    @apply transition-colors;
+  }
+  a {
+    @apply outline-0 focus:ring-2 focus:ring-offset-1 focus:ring-blue-600;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-balance;
+  }
+  p {
+    @apply text-pretty;
+  }
+}
+
+/* RealScout widget styling (heyberkshire pattern) */
+realscout-office-listings {
+  --rs-listing-divider-color: #2563eb;
+  width: 100%;
+}
+
+.realscout-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .realscout-wrapper {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .realscout-wrapper {
+    padding: 0 1rem;
+  }
+}

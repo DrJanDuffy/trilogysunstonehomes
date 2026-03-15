@@ -9,7 +9,12 @@ const communityFaq = [
 	{
 		question: 'What types of homes are available at Trilogy Sunstone?',
 		answer:
-			'Trilogy Sunstone offers new construction and resale homes designed for low-maintenance, single-level or accessible living. Floor plans and price ranges vary; check our listings or contact us for current availability.',
+			'Trilogy Sunstone offers new construction and resale homes designed for low-maintenance, single-level or accessible living. Floor plans and price ranges vary; check our Trilogy Sunstone homes for sale listings or contact us for a Trilogy Sunstone Las Vegas price list.',
+	},
+	{
+		question: 'What are Trilogy Sunstone HOA fees?',
+		answer:
+			'Trilogy Sunstone HOA fees depend on phase and home type. They generally cover common areas, amenities, and often exterior or landscape maintenance. Ask for current HOA fee details when viewing a specific Trilogy Sunstone home for sale.',
 	},
 	{
 		question: 'What amenities does Trilogy Sunstone offer?',
@@ -20,6 +25,14 @@ const communityFaq = [
 		question: 'Where is Trilogy Sunstone located?',
 		answer: 'Trilogy Sunstone is in the Las Vegas area, Southern Nevada. It is part of the broader Trilogy brand of 55+ communities, with easy access to area shopping, healthcare, and entertainment.',
 	},
+	{
+		question: 'Where can I find Trilogy Sunstone Las Vegas reviews?',
+		answer: 'Trilogy Sunstone reviews and Trilogy Sunstone Las Vegas reviews are on Google, community sites, and resident testimonials. We can point you to reviews and share what buyers say about living at Trilogy Sunstone.',
+	},
+	{
+		question: 'Is Trilogy Sunstone Las Vegas for rent?',
+		answer: 'Trilogy Sunstone is primarily a for-sale community; most homes are owner-occupied. Occasionally Trilogy Sunstone Las Vegas for rent listings appear when owners lease their homes. Ask us about current rental availability in the community.',
+	},
 ];
 ---
 
@@ -27,78 +40,88 @@ const communityFaq = [
 	content={{
 		title: 'Trilogy Sunstone Community | Las Vegas 55+ Active Adult Homes',
 		description:
-			'Trilogy Sunstone is a 55+ active adult community in Las Vegas. New homes, amenities, and lifestyle for active adults. Explore the community and current listings.',
+			'Trilogy Sunstone Las Vegas: homes for sale, reviews, price list, HOA fees, for rent. 55+ active adult community. See listings and community info.',
 		canonicalURL: 'https://www.trilogysunstonehomes.com/neighborhoods/trilogy-sunstone/',
 	}}
 >
 	<main class="min-h-screen flex flex-col">
-		<section class="relative flex flex-col items-center justify-center py-20 px-4 bg-gradient-to-br from-[#3A8DDE] to-[#16B286] text-white shadow-lg">
-			<h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow">Trilogy Sunstone Community</h1>
-			<p class="text-lg md:text-xl max-w-2xl text-center opacity-95">
+		<section class="relative flex flex-col items-center justify-center py-20 px-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+			<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center">Trilogy Sunstone Community</h1>
+			<p class="text-lg md:text-xl max-w-2xl text-center text-white/90">
 				Las Vegas' premier 55+ active adult community—new homes and a lifestyle built for you.
 			</p>
 		</section>
 
-		<section class="py-16 px-4 bg-white shadow-md">
-			<div class="max-w-3xl mx-auto">
-				<h2 class="text-2xl font-semibold text-[#0A2540] mb-6">Overview</h2>
-				<p class="text-[#0A2540] leading-relaxed mb-4">
-					Trilogy Sunstone is an age-qualified 55+ community in the Las Vegas area, offering new and resale homes in a setting designed for active adults. Residents enjoy a low-maintenance lifestyle with access to community amenities and a built-in social environment.
-				</p>
-				<p class="text-[#0A2540] leading-relaxed">
-					Whether you are relocating, downsizing, or looking for a dedicated 55+ neighborhood, Trilogy Sunstone is a strong option in Southern Nevada's active adult market.
-				</p>
-			</div>
-		</section>
-
-		<section class="py-16 px-4 bg-[#F7F9FC] shadow-md">
-			<div class="max-w-3xl mx-auto">
-				<h2 class="text-2xl font-semibold text-[#0A2540] mb-6">Amenities & lifestyle</h2>
-				<ul class="space-y-2 text-[#0A2540] list-disc list-inside">
-					<li>Resort-style pool and outdoor spaces</li>
-					<li>Fitness and wellness facilities</li>
-					<li>Social and activity programming for residents</li>
-					<li>Low-maintenance homes and landscaping</li>
-					<li>Proximity to Las Vegas area shopping, healthcare, and entertainment</li>
-				</ul>
-			</div>
-		</section>
-
-		<section class="py-16 px-4 bg-white shadow-md">
-			<div class="max-w-3xl mx-auto">
-				<h2 class="text-2xl font-semibold text-[#0A2540] mb-4">Who it's for</h2>
-				<p class="text-[#0A2540] mb-4">
-					Trilogy Sunstone is for households with at least one person 55 or older who want a dedicated active adult community, new or like-new homes, and an engaged neighborhood without the upkeep of a large house or yard.
-				</p>
-				<h2 class="text-2xl font-semibold text-[#0A2540] mb-4 mt-8">Homes</h2>
-				<p class="text-[#0A2540]">
-					Homes at Trilogy Sunstone are built with active adults in mind: single-level or accessible layouts, modern finishes, and manageable square footage. Prices vary by plan and market. <a href="/" class="text-[#3A8DDE] underline hover:no-underline">View current Trilogy Sunstone listings</a> or <a href="/contact" class="text-[#3A8DDE] underline hover:no-underline">contact us</a> for details.
-				</p>
-			</div>
-		</section>
-
-		<section class="py-16 px-4 bg-[#F7F9FC] shadow-md">
-			<div class="max-w-3xl mx-auto">
-				<h2 class="text-2xl font-semibold text-[#0A2540] mb-8">Community FAQ</h2>
-				<div class="space-y-6">
-					{communityFaq.map((item) => (
-						<article class="border-b border-[#0A2540]/10 pb-6 last:border-0">
-							<h3 class="text-xl font-semibold text-[#0A2540] mb-2">{item.question}</h3>
-							<p class="text-[#0A2540]">{item.answer}</p>
-						</article>
-					))}
+		<section class="py-16 md:py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-3xl mx-auto">
+					<h2 class="text-2xl font-bold text-slate-900 mb-6">Overview</h2>
+					<p class="text-slate-700 leading-relaxed mb-4">
+						Trilogy Sunstone is an age-qualified 55+ community in the Las Vegas area, offering new and resale homes in a setting designed for active adults. Residents enjoy a low-maintenance lifestyle with access to community amenities and a built-in social environment.
+					</p>
+					<p class="text-slate-700 leading-relaxed">
+						Whether you are relocating, downsizing, or looking for a dedicated 55+ neighborhood, Trilogy Sunstone is a strong option in Southern Nevada's active adult market.
+					</p>
 				</div>
 			</div>
 		</section>
 
-		<section class="py-16 px-4 bg-white shadow-md">
-			<div class="max-w-4xl mx-auto text-center">
-				<h2 class="text-2xl font-semibold text-[#0A2540] mb-4">Explore Trilogy Sunstone</h2>
-				<div class="flex flex-wrap gap-4 justify-center">
-					<a href="/" class="inline-block px-6 py-3 rounded-lg font-semibold bg-[#3A8DDE] text-white hover:bg-[#2d7bc7] transition shadow">View Listings</a>
-					<a href="/neighborhoods" class="inline-block px-6 py-3 rounded-lg font-semibold border-2 border-[#0A2540]/30 text-[#0A2540] hover:bg-[#0A2540]/10 transition">All Neighborhoods</a>
-					<a href="/buyers-guide" class="inline-block px-6 py-3 rounded-lg font-semibold border-2 border-[#16B286] text-[#16B286] hover:bg-[#16B286] hover:text-white transition">Buyer's Guide</a>
-					<a href="/contact" class="inline-block px-6 py-3 rounded-lg font-semibold bg-[#16B286] text-white hover:bg-[#3A8DDE] transition shadow">Contact Us</a>
+		<section class="py-16 md:py-20 bg-slate-50">
+			<div class="container mx-auto px-4">
+				<div class="max-w-3xl mx-auto">
+					<h2 class="text-2xl font-bold text-slate-900 mb-6">Amenities & lifestyle</h2>
+					<ul class="space-y-2 text-slate-700 list-disc list-inside">
+						<li>Resort-style pool and outdoor spaces</li>
+						<li>Fitness and wellness facilities</li>
+						<li>Social and activity programming for residents</li>
+						<li>Low-maintenance homes and landscaping</li>
+						<li>Proximity to Las Vegas area shopping, healthcare, and entertainment</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-3xl mx-auto">
+					<h2 class="text-2xl font-bold text-slate-900 mb-4">Who it's for</h2>
+					<p class="text-slate-700 mb-4">
+						Trilogy Sunstone is for households with at least one person 55 or older who want a dedicated active adult community, new or like-new homes, and an engaged neighborhood without the upkeep of a large house or yard.
+					</p>
+					<h2 class="text-2xl font-bold text-slate-900 mb-4 mt-8">Trilogy Sunstone homes for sale</h2>
+					<p class="text-slate-700">
+						Homes at Trilogy Sunstone are built with active adults in mind: single-level or accessible layouts, modern finishes, and manageable square footage. View <a href="/" class="text-blue-600 hover:text-blue-700 font-medium">Trilogy Sunstone homes for sale</a> and Trilogy Sunstone Las Vegas for sale listings on our homepage; we also have Trilogy Sunstone by owner (FSBO) and agent-listed inventory. For a Trilogy Sunstone Las Vegas price list by plan, <a href="/contact" class="text-blue-600 hover:text-blue-700 font-medium">contact us</a>.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-20 bg-slate-50">
+			<div class="container mx-auto px-4">
+				<div class="max-w-3xl mx-auto">
+					<h2 class="text-2xl font-bold text-slate-900 mb-8">Community FAQ</h2>
+					<div class="space-y-6">
+						{communityFaq.map((item) => (
+							<article class="border-b border-slate-200 pb-6 last:border-0">
+								<h3 class="text-xl font-semibold text-slate-900 mb-2">{item.question}</h3>
+								<p class="text-slate-700">{item.answer}</p>
+							</article>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-2xl font-bold text-slate-900 mb-4">Explore Trilogy Sunstone</h2>
+					<div class="flex flex-wrap gap-4 justify-center">
+						<a href="/" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">View Listings</a>
+						<a href="/neighborhoods" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold border border-slate-300 text-slate-700 hover:bg-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">All Neighborhoods</a>
+						<a href="/buyers-guide" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold border border-slate-300 text-slate-700 hover:bg-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">Buyer's Guide</a>
+						<a href="/contact" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">Contact Us</a>
+					</div>
 				</div>
 			</div>
 		</section>

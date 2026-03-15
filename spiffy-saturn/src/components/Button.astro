@@ -6,7 +6,7 @@ interface Props {
 }
 const { class: className } = Astro.props;
 const baseClasses =
-	'appearance-none px-4 py-2 rounded-lg font-semibold shadow focus:outline-none focus:ring-2 focus:ring-offset-2';
+	'inline-flex items-center justify-center rounded-md text-sm font-medium h-10 px-4 py-2 shadow transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 bg-blue-600 text-white hover:bg-blue-700';
 ---
 
 <button class:list={[baseClasses, className]}>

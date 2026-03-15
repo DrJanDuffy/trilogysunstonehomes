@@ -32,9 +32,9 @@ const faqItems = [
 
 <MainLayout
 	content={{
-		title: "Buyer's Guide | How to Buy a Home at Trilogy Sunstone",
+		title: "Buyer's Guide | How to Buy a Trilogy Sunstone Home for Sale",
 		description:
-			"Step-by-step guide to buying a home at Trilogy Sunstone, Las Vegas 55+ community. Pre-approval, age rules, timeline, inspections, and pricing.",
+			"Step-by-step guide to buying a Trilogy Sunstone home for sale. Pre-approval, age rules, timeline, inspections, and Trilogy Sunstone Las Vegas price list info.",
 		canonicalURL: 'https://www.trilogysunstonehomes.com/buyers-guide/',
 	}}
 >
@@ -50,66 +50,71 @@ const faqItems = [
 		})} />
 	</Fragment>
 	<main class="min-h-screen flex flex-col">
-		<section class="relative flex flex-col items-center justify-center py-20 px-4 bg-gradient-to-br from-[#3A8DDE] to-[#16B286] text-white shadow-lg">
-			<h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow">How to Buy a Home at Trilogy Sunstone</h1>
-			<p class="text-lg md:text-xl max-w-2xl text-center opacity-95">
+		<section class="relative flex flex-col items-center justify-center py-20 px-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+			<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center">How to Buy a Home at Trilogy Sunstone</h1>
+			<p class="text-lg md:text-xl max-w-2xl text-center text-white/90">
 				A clear path from search to closing in Las Vegas' premier 55+ community.
 			</p>
 		</section>
 
-		<section class="py-16 px-4 bg-white shadow-md">
-			<div class="max-w-3xl mx-auto">
-				<p class="text-[#0A2540] text-lg mb-10">
-					Buying at Trilogy Sunstone follows the same proven steps as any great home purchase—with the added benefit of a 55+ community designed for your lifestyle. Here is how it works.
-				</p>
-				<h2 class="text-2xl font-semibold text-[#0A2540] mb-6">Steps to Buy</h2>
-				<ol class="space-y-6 list-decimal list-inside">
-					<li>
-						<h3 class="text-xl font-semibold text-[#0A2540] inline">Get pre-approved.</h3>
-						<p class="text-[#0A2540] mt-1 ml-6">Work with a lender to get pre-approved for a mortgage. This defines your budget and shows sellers you are ready to buy.</p>
-					</li>
-					<li>
-						<h3 class="text-xl font-semibold text-[#0A2540] inline">Search and tour.</h3>
-						<p class="text-[#0A2540] mt-1 ml-6">Browse <a href="/" class="text-[#3A8DDE] underline hover:no-underline">current Trilogy Sunstone listings</a> and schedule showings. We can help you narrow by price, floor plan, and location within the community.</p>
-					</li>
-					<li>
-						<h3 class="text-xl font-semibold text-[#0A2540] inline">Make an offer.</h3>
-						<p class="text-[#0A2540] mt-1 ml-6">Once you choose a home, we prepare and submit an offer. Terms may include earnest money, contingencies (e.g. inspection, financing), and a closing date.</p>
-					</li>
-					<li>
-						<h3 class="text-xl font-semibold text-[#0A2540] inline">Due diligence and inspections.</h3>
-						<p class="text-[#0A2540] mt-1 ml-6">During the contingency period, complete a home inspection and any other agreed checks. Address issues with the seller or adjust the deal as needed.</p>
-					</li>
-					<li>
-						<h3 class="text-xl font-semibold text-[#0A2540] inline">Close.</h3>
-						<p class="text-[#0A2540] mt-1 ml-6">Finalize financing, complete the title process, and attend closing. You receive the keys and become a Trilogy Sunstone homeowner.</p>
-					</li>
-				</ol>
-			</div>
-		</section>
-
-		<section class="py-16 px-4 bg-[#F7F9FC] shadow-md">
-			<div class="max-w-3xl mx-auto">
-				<h2 class="text-2xl font-semibold text-[#0A2540] mb-8">Common questions</h2>
-				<div class="space-y-8">
-					{faqItems.map((item) => (
-						<article class="border-b border-[#0A2540]/10 pb-6 last:border-0">
-							<h3 class="text-xl font-semibold text-[#0A2540] mb-2">{item.question}</h3>
-							<p class="text-[#0A2540]">{item.answer}</p>
-						</article>
-					))}
+		<section class="py-16 md:py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-3xl mx-auto">
+					<p class="text-slate-700 text-lg mb-10">
+						Buying at Trilogy Sunstone follows the same proven steps as any great home purchase—with the added benefit of a 55+ community designed for your lifestyle. Here is how it works.
+					</p>
+					<h2 class="text-2xl font-bold text-slate-900 mb-6">Steps to Buy</h2>
+					<ol class="space-y-6 list-decimal list-inside">
+						<li>
+							<h3 class="text-xl font-semibold text-slate-900 inline">Get pre-approved.</h3>
+							<p class="text-slate-700 mt-1 ml-6">Work with a lender to get pre-approved for a mortgage. This defines your budget and shows sellers you are ready to buy.</p>
+						</li>
+						<li>
+							<h3 class="text-xl font-semibold text-slate-900 inline">Search and tour.</h3>
+							<p class="text-slate-700 mt-1 ml-6">Browse <a href="/" class="text-blue-600 hover:text-blue-700 font-medium">current Trilogy Sunstone listings</a> and schedule showings. We can help you narrow by price, floor plan, and location within the community.</p>
+						</li>
+						<li>
+							<h3 class="text-xl font-semibold text-slate-900 inline">Make an offer.</h3>
+							<p class="text-slate-700 mt-1 ml-6">Once you choose a home, we prepare and submit an offer. Terms may include earnest money, contingencies (e.g. inspection, financing), and a closing date.</p>
+						</li>
+						<li>
+							<h3 class="text-xl font-semibold text-slate-900 inline">Due diligence and inspections.</h3>
+							<p class="text-slate-700 mt-1 ml-6">During the contingency period, complete a home inspection and any other agreed checks. Address issues with the seller or adjust the deal as needed.</p>
+						</li>
+						<li>
+							<h3 class="text-xl font-semibold text-slate-900 inline">Close.</h3>
+							<p class="text-slate-700 mt-1 ml-6">Finalize financing, complete the title process, and attend closing. You receive the keys and become a Trilogy Sunstone homeowner.</p>
+						</li>
+					</ol>
 				</div>
 			</div>
 		</section>
 
-		<section class="py-16 px-4 bg-white shadow-md">
-			<div class="max-w-4xl mx-auto text-center">
-				<h2 class="text-2xl font-semibold text-[#0A2540] mb-4">Ready to start?</h2>
-				<p class="text-[#0A2540] mb-6">View listings or contact us for personalized help.</p>
-				<div class="flex flex-wrap gap-4 justify-center">
-					<a href="/" class="inline-block px-6 py-3 rounded-lg font-semibold bg-[#3A8DDE] text-white hover:bg-[#2d7bc7] transition shadow">View Listings</a>
-					<a href="/contact" class="inline-block px-6 py-3 rounded-lg font-semibold border-2 border-[#16B286] text-[#16B286] hover:bg-[#16B286] hover:text-white transition">Contact Us</a>
-					<a href="/faq" class="inline-block px-6 py-3 rounded-lg font-semibold border-2 border-[#0A2540]/30 text-[#0A2540] hover:bg-[#0A2540]/10 transition">More FAQ</a>
+		<section class="py-16 md:py-20 bg-slate-50">
+			<div class="container mx-auto px-4">
+				<div class="max-w-3xl mx-auto">
+					<h2 class="text-2xl font-bold text-slate-900 mb-8">Common questions</h2>
+					<div class="space-y-8">
+						{faqItems.map((item) => (
+							<article class="border-b border-slate-200 pb-6 last:border-0">
+								<h3 class="text-xl font-semibold text-slate-900 mb-2">{item.question}</h3>
+								<p class="text-slate-700">{item.answer}</p>
+							</article>
+						))}
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-2xl font-bold text-slate-900 mb-4">Ready to start?</h2>
+					<p class="text-slate-700 mb-6">View listings or contact us for personalized help.</p>
+					<div class="flex flex-wrap gap-4 justify-center">
+						<a href="/" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">View Listings</a>
+						<a href="/contact" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold border border-slate-300 text-slate-700 hover:bg-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">Contact Us</a>
+						<a href="/faq" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold border border-slate-300 text-slate-700 hover:bg-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">More FAQ</a>
+					</div>
 				</div>
 			</div>
 		</section>

@@ -1,6 +1,9 @@
 ---
 import MainLayout from '../layouts/main.astro';
 
+const address = '9560 Lapis Ln, Las Vegas, NV 89143';
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+
 const localBusinessSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'RealEstateAgent',
@@ -8,6 +11,13 @@ const localBusinessSchema = {
 	description: 'Real estate and homes at Trilogy Sunstone, Las Vegas 55+ active adult community.',
 	url: 'https://www.trilogysunstonehomes.com',
 	telephone: '+1-702-500-1942',
+	address: {
+		'@type': 'PostalAddress',
+		streetAddress: '9560 Lapis Ln',
+		addressLocality: 'Las Vegas',
+		addressRegion: 'NV',
+		postalCode: '89143',
+	},
 	areaServed: { '@type': 'City', name: 'Las Vegas', containedInPlace: { '@type': 'State', name: 'Nevada' } },
 };
 ---
@@ -24,42 +34,52 @@ const localBusinessSchema = {
 		<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
 	</Fragment>
 	<main class="min-h-screen flex flex-col">
-		<section class="relative flex flex-col items-center justify-center py-20 px-4 bg-gradient-to-br from-[#3A8DDE] to-[#16B286] text-white shadow-lg">
-			<h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow">Contact Us</h1>
-			<p class="text-lg md:text-xl max-w-2xl text-center opacity-95">
+		<section class="relative flex flex-col items-center justify-center py-20 px-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+			<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center">Contact Us</h1>
+			<p class="text-lg md:text-xl max-w-2xl text-center text-white/90">
 				Questions about Trilogy Sunstone homes? We're here to help.
 			</p>
 		</section>
 
-		<section class="py-16 px-4 bg-white shadow-md">
-			<div class="max-w-2xl mx-auto">
-				<h2 class="text-2xl font-semibold text-[#0A2540] mb-6">Get in Touch</h2>
-				<div class="space-y-6 text-[#0A2540]">
-					<p class="text-lg">
-						Reach out for listings, community information, or to schedule a visit to Trilogy Sunstone.
-					</p>
-					<div class="flex flex-col sm:flex-row gap-4">
-						<a
-							href="tel:+17025001942"
-							class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold bg-[#16B286] text-white hover:bg-[#3A8DDE] transition shadow"
-						>
-							Call (702) 500-1942
-						</a>
-						<a
-							href="/"
-							class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold border-2 border-[#3A8DDE] text-[#3A8DDE] hover:bg-[#3A8DDE] hover:text-white transition"
-						>
-							View Listings
-						</a>
+		<section class="py-16 md:py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-2xl mx-auto">
+					<h2 class="text-2xl font-bold text-slate-900 mb-6">Get in Touch</h2>
+					<div class="space-y-6 text-slate-700">
+						<p class="text-lg">
+							Reach out for listings, community information, or to schedule a visit to Trilogy Sunstone.
+						</p>
+						<div class="flex flex-col sm:flex-row gap-4">
+							<a
+								href="tel:+17025001942"
+								class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+							>
+								Call (702) 500-1942
+							</a>
+							<a
+								href="/"
+								class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md font-semibold border border-slate-300 text-slate-700 hover:bg-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+							>
+								View Listings
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="py-16 px-4 bg-[#F7F9FC] shadow-md">
-			<div class="max-w-4xl mx-auto text-center">
-				<h2 class="text-2xl font-semibold text-[#0A2540] mb-4">Trilogy Sunstone Homes</h2>
-				<p class="text-[#0A2540]">Las Vegas, NV · 55+ active lifestyle community</p>
+		<section class="py-16 md:py-20 bg-slate-50">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-2xl font-bold text-slate-900 mb-4">Trilogy Sunstone Homes</h2>
+					<address class="text-slate-700 not-italic">
+						<p>{address}</p>
+						<p class="mt-2">
+							<a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium">Get directions</a>
+						</p>
+					</address>
+					<p class="text-slate-600 mt-2">55+ active lifestyle community</p>
+				</div>
 			</div>
 		</section>
 	</main>
