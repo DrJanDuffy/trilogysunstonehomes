@@ -1,19 +1,23 @@
 # Lessons
 
-Patterns and rules learned from corrections. Update after any user correction. Review at session start for relevant project.
+**Self-improvement loop:** After any correction from the user, add an entry here. Write rules that prevent the same mistake. Review at session start for this project.
 
 ---
 
-## Format
+## Format per entry
 
-For each lesson:
-
-- **What happened:** Brief description of the mistake or confusion.
-- **Rule:** What to do (or not do) next time.
-- **When:** Date or context.
+- **What happened** – Brief description of the mistake or confusion.
+- **Rule** – What to do (or not do) next time.
+- **When** – Date or context.
 
 ---
 
 ## Entries
 
-_(Add entries as corrections occur.)_
+_(Add below as corrections occur.)_
+
+### Example (replace with real lessons)
+
+- **What happened:** Assumed a fix was complete without running the build.
+- **Rule:** Never mark a task complete without proving it works (e.g. run `npm run build` or tests).
+- **When:** Session start / verification guideline.
