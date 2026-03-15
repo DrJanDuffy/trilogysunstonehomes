@@ -12,27 +12,39 @@ interface Props {
 }
 
 const { content } = Astro.props;
-// Optional: set PUBLIC_GSC_VERIFICATION in env (e.g. .env or Cloudflare Pages env) to the code from
-// Google Search Console → Settings → Ownership verification → HTML tag. Do not commit the real code.
 const gscCode = import.meta.env.PUBLIC_GSC_VERIFICATION;
 const canonical = content.canonicalURL ?? 'https://www.trilogysunstonehomes.com/';
+const siteName = 'Trilogy Sunstone Homes';
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#1e40af" />
+		<meta name="robots" content="index, follow" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{content.title}</title>
 		{content.description && <meta name="description" content={content.description} />}
 		<link rel="canonical" href={canonical} />
 		<link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:title" content={content.title} />
+		{content.description && <meta property="og:description" content={content.description} />}
+		<meta property="og:site_name" content={siteName} />
+		<meta property="og:locale" content="en_US" />
+		<link rel="preconnect" href="https://em.realscout.com" />
+		<link rel="preconnect" href="https://www.realscout.com" />
 		{gscCode && <meta name="google-site-verification" content={gscCode} />}
 		<slot name="head" />
 	</head>
 	<body class="min-h-screen flex flex-col bg-white text-sm md:text-base">
+		<a href="#main-content" class="absolute left-[-9999px] top-4 w-px h-px overflow-hidden focus:left-4 focus:top-4 focus:z-[100] focus:px-4 focus:py-2 focus:w-auto focus:h-auto focus:overflow-visible focus:bg-blue-600 focus:text-white focus:rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600">
+			Skip to main content
+		</a>
 		<Header />
-		<div class="flex-1"><slot /></div>
+		<div id="main-content" class="flex-1" tabindex="-1"><slot /></div>
 		<Footer />
 	</body>
 </html>
