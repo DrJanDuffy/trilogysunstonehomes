@@ -1,11 +1,15 @@
 ---
 // Click button, get confetti!
-// Styled by Tailwind :)
+// Styled by Tailwind; pass class for brand colors.
+interface Props {
+	class?: string;
+}
+const { class: className } = Astro.props;
+const baseClasses =
+	'appearance-none px-4 py-2 rounded-lg font-semibold shadow focus:outline-none focus:ring-2 focus:ring-offset-2';
 ---
 
-<button
-	class="appearance-none py-2 px-4 bg-purple-500 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-75"
->
+<button class:list={[baseClasses, className]}>
 	<slot />
 </button>
 
