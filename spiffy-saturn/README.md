@@ -18,4 +18,9 @@ The site is built as a static Astro site and deploys to [Vercel](https://vercel.
 
 ## Google Search Console
 
-The site is set up for Google Search Console: sitemap at `/sitemap-index.xml`, static `robots.txt` in `public/`, and optional verification via HTML meta tag. To verify ownership, set the env var `PUBLIC_GSC_VERIFICATION` to the code from GSC → Settings → Ownership verification → HTML tag (e.g. in Vercel project env or a `.env` file). Do not commit the real verification code.
+The site is ready for [Google Search Console](https://search.google.com/search-console):
+
+1. **Add property** – In GSC, add a property with URL prefix `https://www.trilogysunstonehomes.com`.
+2. **Verify ownership** – Use the HTML tag method: copy the `content` value from GSC (Settings → Ownership verification → HTML tag). Set the env var `PUBLIC_GSC_VERIFICATION` to that value (e.g. in Vercel: Project → Settings → Environment Variables, or in a local `.env` file). Redeploy so the meta tag is present, then click “Verify” in GSC. Do not commit the real verification code. See `.env.example`.
+3. **Submit sitemap** – In GSC, go to Sitemaps and submit: `https://www.trilogysunstonehomes.com/sitemap-index.xml`. The site also declares this in `robots.txt` and in the layout `<link rel="sitemap">`.
+4. **What’s in place** – Sitemap at `/sitemap-index.xml` (generated at build), `public/robots.txt` with Allow and Sitemap, unique titles and canonicals per page, WebSite JSON-LD in the layout, and optional GSC meta tag when `PUBLIC_GSC_VERIFICATION` is set.

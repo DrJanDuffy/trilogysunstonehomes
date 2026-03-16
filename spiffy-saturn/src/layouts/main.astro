@@ -15,6 +15,15 @@ const { content } = Astro.props;
 const gscCode = import.meta.env.PUBLIC_GSC_VERIFICATION;
 const canonical = content.canonicalURL ?? 'https://www.trilogysunstonehomes.com/';
 const siteName = 'Trilogy Sunstone Homes';
+const siteUrl = 'https://www.trilogysunstonehomes.com';
+
+const websiteSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	name: siteName,
+	url: siteUrl,
+	description: 'Trilogy Sunstone Homes – Las Vegas 55+ active adult community. Find homes for sale, community info, and buyer resources.',
+};
 ---
 
 <html lang="en">
@@ -37,6 +46,7 @@ const siteName = 'Trilogy Sunstone Homes';
 		<link rel="preconnect" href="https://em.realscout.com" />
 		<link rel="preconnect" href="https://www.realscout.com" />
 		{gscCode && <meta name="google-site-verification" content={gscCode} />}
+		<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 		<slot name="head" />
 	</head>
 	<body class="min-h-screen flex flex-col bg-white text-sm md:text-base">
