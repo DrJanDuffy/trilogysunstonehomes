@@ -3,31 +3,43 @@ const address = '9560 Lapis Ln, Las Vegas, NV 89143';
 const phone = '(702) 500-1942';
 const phoneTel = 'tel:+17025001942';
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-const navLinks = [
+const currentYear = new Date().getFullYear();
+
+const quickLinks = [
 	{ href: '/', label: 'Home' },
-	{ href: '/about', label: 'About' },
-	{ href: '/neighborhoods/trilogy-sunstone', label: 'Trilogy Sunstone' },
 	{ href: '/neighborhoods', label: 'Neighborhoods' },
+	{ href: '/about', label: 'About' },
 	{ href: '/buyers-guide', label: "Buyer's Guide" },
 	{ href: '/faq', label: 'FAQ' },
 	{ href: '/contact', label: 'Contact' },
 ];
-const currentYear = new Date().getFullYear();
+
+const services = [
+	{ href: '/buyers-guide', label: 'Home Buying' },
+	{ href: '/', label: 'View Listings' },
+	{ href: '/neighborhoods/trilogy-sunstone', label: 'Trilogy Sunstone Community' },
+	{ href: '/contact', label: 'Contact' },
+];
 ---
 
-<footer class="bg-slate-900 text-white mt-auto">
+<footer class="bg-slate-900 text-white mt-auto" role="contentinfo">
 	<div class="container mx-auto px-4 py-12 md:py-16">
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+			<!-- Brand -->
 			<div>
-				<h3 class="font-bold text-xl mb-4">Trilogy Sunstone Homes</h3>
+				<h3 class="font-bold text-xl mb-4">
+					<a href="/" class="text-white hover:text-blue-300 transition-colors">Trilogy Sunstone Homes</a>
+				</h3>
 				<p class="text-slate-300 mb-4 text-sm">
-					Las Vegas 55+ active adult community. Your trusted partner for Trilogy Sunstone homes for sale and community information.
+					Las Vegas 55+ active adult community. Your trusted partner for Trilogy Sunstone homes for sale and community information. Backed by a legacy of trust and integrity.
 				</p>
 			</div>
-			<div>
+
+			<!-- Quick Links -->
+			<nav aria-label="Quick links">
 				<h3 class="font-bold text-lg mb-4">Quick Links</h3>
 				<ul class="space-y-2">
-					{navLinks.map((link) => (
+					{quickLinks.map((link) => (
 						<li>
 							<a href={link.href} class="text-slate-300 hover:text-white transition-colors text-sm">
 								{link.label}
@@ -35,21 +47,29 @@ const currentYear = new Date().getFullYear();
 						</li>
 					))}
 				</ul>
-			</div>
-			<div>
-				<h3 class="font-bold text-lg mb-4">Explore</h3>
+			</nav>
+
+			<!-- Real Estate Services -->
+			<nav aria-label="Real estate services">
+				<h3 class="font-bold text-lg mb-4">Real Estate Services</h3>
 				<ul class="space-y-2">
-					<li><a href="/neighborhoods/trilogy-sunstone" class="text-slate-300 hover:text-white transition-colors text-sm">Trilogy Sunstone Community</a></li>
-					<li><a href="/buyers-guide" class="text-slate-300 hover:text-white transition-colors text-sm">Buyer's Guide</a></li>
-					<li><a href="/faq" class="text-slate-300 hover:text-white transition-colors text-sm">FAQ</a></li>
+					{services.map((link) => (
+						<li>
+							<a href={link.href} class="text-slate-300 hover:text-white transition-colors text-sm">
+								{link.label}
+							</a>
+						</li>
+					))}
 				</ul>
-			</div>
+			</nav>
+
+			<!-- Contact -->
 			<div>
 				<h3 class="font-bold text-lg mb-4">Contact</h3>
 				<ul class="space-y-3">
 					<li class="flex items-start gap-3">
 						<span class="text-blue-400 flex-shrink-0 mt-0.5" aria-hidden="true">📍</span>
-						<span class="text-slate-300 text-sm">{address}</span>
+						<a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white transition-colors text-sm">{address}</a>
 					</li>
 					<li class="flex items-center gap-3">
 						<span class="text-blue-400 flex-shrink-0" aria-hidden="true">📞</span>
@@ -58,22 +78,28 @@ const currentYear = new Date().getFullYear();
 					<li class="flex flex-wrap gap-2 mt-2">
 						<a href={phoneTel} class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md h-9 px-4 transition-colors">Call</a>
 						<a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center border border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white text-sm font-medium rounded-md h-9 px-4 transition-colors">Directions</a>
+						<a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center border border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white text-sm font-medium rounded-md h-9 px-4 transition-colors">View Google Reviews</a>
+					</li>
+					<li>
+						<a href="/contact" class="text-slate-300 hover:text-white transition-colors text-sm">Schedule a call or send a message →</a>
 					</li>
 				</ul>
 			</div>
 		</div>
+
+		<!-- Copyright bar -->
 		<div class="border-t border-slate-800 mt-8 pt-8">
 			<div class="flex flex-col md:flex-row justify-between items-center gap-4">
 				<p class="text-slate-400 text-sm text-center md:text-left">
-					© {currentYear} Trilogy Sunstone Homes. Las Vegas 55+ active adult community.
+					© {currentYear} Trilogy Sunstone Homes. All Rights Reserved.
 				</p>
-				<div class="flex flex-wrap justify-center gap-4 text-sm">
+				<nav aria-label="Footer legal and site links" class="flex flex-wrap justify-center gap-4 text-sm">
 					<a href="/faq" class="text-slate-400 hover:text-white transition-colors">FAQ</a>
 					<a href="/sitemap-index.xml" class="text-slate-400 hover:text-white transition-colors">Sitemap</a>
-				</div>
+				</nav>
 			</div>
 			<p class="text-slate-500 text-xs mt-4 text-center">
-				Trilogy Sunstone homes for sale and community information.
+				Las Vegas 55+ active adult community. Trilogy Sunstone homes for sale and community information.
 			</p>
 		</div>
 	</div>
