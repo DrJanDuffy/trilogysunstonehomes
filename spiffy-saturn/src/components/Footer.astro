@@ -3,7 +3,6 @@ const address = '9560 Lapis Ln, Las Vegas, NV 89143';
 const phone = '(702) 500-1942';
 const phoneTel = 'tel:+17025001942';
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-const currentYear = new Date().getFullYear();
 
 const quickLinks = [
 	{ href: '/', label: 'Home' },
@@ -88,18 +87,21 @@ const services = [
 		</div>
 
 		<!-- Copyright bar -->
-		<div class="border-t border-slate-800 mt-8 pt-8">
+		<div class="border-t border-slate-800 mt-8 pt-8 space-y-4">
 			<div class="flex flex-col md:flex-row justify-between items-center gap-4">
 				<p class="text-slate-400 text-sm text-center md:text-left">
-					© {currentYear} Trilogy Sunstone Homes. All Rights Reserved.
+					© 2026 Berkshire Hathaway HomeServices Nevada Properties. All Rights Reserved.
 				</p>
 				<nav aria-label="Footer legal and site links" class="flex flex-wrap justify-center gap-4 text-sm">
 					<a href="/faq" class="text-slate-400 hover:text-white transition-colors">FAQ</a>
 					<a href="/sitemap-index.xml" class="text-slate-400 hover:text-white transition-colors">Sitemap</a>
 				</nav>
 			</div>
-			<p class="text-slate-500 text-xs mt-4 text-center">
-				Las Vegas 55+ active adult community. Trilogy Sunstone homes for sale and community information.
+			<p class="text-slate-500 text-xs text-center">
+				Dr. Jan Duffy, REALTOR® | License S.0197614.LLC | Berkshire Hathaway HomeServices Nevada Properties
+			</p>
+			<p class="text-slate-500 text-xs text-center max-w-2xl mx-auto">
+				When you work with a Berkshire Hathaway HomeServices agent, you're backed by a name synonymous with trust, ethical standards, and financial strength.
 			</p>
 		</div>
 	</div>
